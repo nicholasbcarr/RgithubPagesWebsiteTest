@@ -89,6 +89,17 @@ ggplot(Phen, aes(FRUIT.LENGTH, SEED.CAVITY.WIDTH, group=FRUIT.FLESH.COLOR, col=F
 ```
 
 ```{r Explore the data}
+
+## My ggPlot
+ggplot(Phen, aes(FRUIT.LENGTH, SEED.CAVITY.WIDTH, group=FRUIT.FLESH.COLOR, col=FRUIT.FLESH.COLOR)) + 
+         geom_point() +
+         geom_smooth( method = lm) +
+         ylim(0,20) +
+         theme_dark()
+```
+
+```{r Explore the data}
+
 ###Get summary statistics
 phen_sum<-summary(Phen)
 
